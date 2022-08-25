@@ -18,7 +18,6 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         
-
         
         let alert = UIAlertController(title: "Photo Access", message: "Do you alow use your photos?", preferredStyle: .alert)
         present(alert, animated: true, completion: nil)
@@ -35,6 +34,7 @@ class ViewController: UIViewController {
         enum Films: String {
             case film1 = "Spiderman"
             case film2 = "Batman"
+            case game = "Left4Dead"
         }
         
         let alert = UIAlertController(title: nil, message: "Choose Film", preferredStyle: .actionSheet)
@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         
         let film2 = UIAlertAction(title: Films.film2.rawValue, style: .default, handler: handler(.film2))
         alert.addAction(film2)
+        
+        let game = UIAlertAction(title: Films.game.rawValue, style: .default, handler: handler(.game))
+        alert.addAction(game)
         
     }
 }
